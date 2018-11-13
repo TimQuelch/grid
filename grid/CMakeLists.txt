@@ -13,6 +13,7 @@ target_include_directories(
     INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
     $<INSTALL_INTERFACE:include/>)
+target_compile_features(grid INTERFACE cxx_std_17)
 
 # Install
 include(GNUInstallDirs)
