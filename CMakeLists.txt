@@ -19,11 +19,13 @@ else()
 endif()
 
 add_subdirectory(grid)
+
+enable_testing()
 add_subdirectory(test)
 
 if(CLANG_TIDY_EXE AND RUN_CLANG_TIDY)
     set_target_properties(
-        grid
+        test-grid
         PROPERTIES
         CXX_CLANG_TIDY "${CLANG_TIDY}")
 endif()
